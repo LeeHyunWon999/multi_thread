@@ -1,9 +1,9 @@
 // integer 100만 ~ 500만까지 싱글스레드와 멀티스레드로 각각 짜고 성능비교
 
 use std::io::{self, Write}; // write!(io::stdout(), "{}", abc); writeln! 등 엔터 자동으로 넣는 출력문이 아니라면 io::stdout().flush() 필요
-use std::sync::{Arc, Mutex};
+use std::sync::{Arc, Mutex}; // 공유자원(뮤텍스)용
 use std::thread; // 멀티스레드용
-use std::time::SystemTime; // 시간측정용 // 공유자원(뮤텍스)용
+use std::time::SystemTime; // 시간측정용
 
 // 싱글스레드로 연산하기
 fn single() {
